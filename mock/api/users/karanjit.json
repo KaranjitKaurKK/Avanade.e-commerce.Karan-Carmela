@@ -1,0 +1,9 @@
+{
+    "firstName": "Karanjit",
+    "lastName": "Kaur", 
+    "shippingAddress": {
+        "city":"Cremona",
+        "street": "Via Cesare Battisti, 43", 
+        "zipCode": "26030"
+    }
+}

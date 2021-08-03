@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <h2 style="color: #FFD700" aria-current="page">BEERVANADE
+                        <img src="https://e7.pngegg.com/pngimages/961/438/png-clipart-beer-mug-logo-beer-food-keg-oktoberfest-beer-barrel-mug-and-wheat-poster-barrel.png"
+                            width="70px" />
+                    </h2>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink='/home'> HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink='/catalog'> BEERSHOP</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <a class="nav-link active" aria-current="page" routerLink='/profile'><img
+            src="https://img.icons8.com/officel/30/000000/user.png" /></a>
+    <a class="nav-link" routerLink='/cart'><img src="https://img.icons8.com/office/40/000000/shopping-cart.png" /></a>
+</nav>
+<div class='container'>
+    <router-outlet></router-outlet>
+</div>

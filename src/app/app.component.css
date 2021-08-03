@@ -1,3 +1,5 @@
-.nav-link {
-    font-size: large;
+.image{
+    height:40em; background-size:cover; width:auto;
+    background-image:url('https://www.larassegna.it/wp-content/uploads/2018/12/BIRRE.jpg');
+    background-position:50% 50%;
 }

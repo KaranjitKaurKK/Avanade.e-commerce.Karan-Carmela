@@ -1,20 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  template: `
-    <p>
-      home works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './home.component.html',
+  styles: []
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  //per passare il parametro
+  constructor(private route: ActivatedRoute) {
+    console.log(route.snapshot.queryParamMap);
   }
-
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      //per controllare gli oggetti
+      console.log('user =', params.user);
+    });
+  }
 }
