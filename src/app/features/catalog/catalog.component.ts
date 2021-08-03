@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  templateUrl: './catalog.component.html',
+  selector: 'app-catalog',
+  template: `
+    <p>
+      catalog works!
+    </p>
+  `,
+  styles: [
+  ]
 })
 export class CatalogComponent implements OnInit {
-  pageTitle: string='CATALOG';
 
   constructor() { }
 

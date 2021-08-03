@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  templateUrl: './profile.component.html',
+  selector: 'app-profile',
+  template: `
+    <p>
+      profile works!
+    </p>
+  `,
+  styles: [
+  ]
 })
 export class ProfileComponent implements OnInit {
-  pageTitle: string='PROFILE';
 
   constructor() { }
 

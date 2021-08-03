@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  templateUrl: './cart.component.html',
+  selector: 'app-cart',
+  template: `
+    <p>
+      cart works!
+    </p>
+  `,
+  styles: [
+  ]
 })
 export class CartComponent implements OnInit {
-  pageTitle: string='CART';
 
   constructor() { }
 

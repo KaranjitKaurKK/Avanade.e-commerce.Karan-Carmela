@@ -3,29 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { CatalogComponent } from './catalog/catalog.component';
-import { ProfileComponent } from './profile/profile.component';
-import { CartComponent } from './cart/cart.component';
 import { RouterModule } from '@angular/router';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    CatalogComponent,
-    ProfileComponent,
-    CartComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    RouterModule.forRoot([
-      { path: 'home', component: HomeComponent },
-      { path: 'profile', component: ProfileComponent },
-      { path: 'cart', component: CartComponent },
-      { path: 'catalog', component: CatalogComponent }
-    ])
+    RouterModule,
+    CoreModule, 
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
