@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-catalog',
-  template: `
-    <p>
-      catalog works!
-    </p>
-  `,
+  templateUrl : './catalog.component.html',
   styles: [
   ]
 })

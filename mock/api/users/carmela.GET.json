@@ -1,8 +1,8 @@
 {
     "id": 2,
-    "firstName": "Carmen",
+    "firstName": "Carmela",
     "lastName": "De Feo",
-    "email": "carmen.de.feo@avanade.com",
+    "email": "carmela.de.feo@avanade.com",
     "phoneNumber": "3317590425",
     "dateOfBirth": "August 27th, 1992",
     "shippingAddress": {
