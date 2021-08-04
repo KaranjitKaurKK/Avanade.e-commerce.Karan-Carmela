@@ -9,7 +9,7 @@ import { catchError, tap } from "rxjs/operators";
 })
 
 export class UserService {
-    private userBasePath = 'api/users/'
+    private userBasePath = '/api/users/'
 
     constructor(private http: HttpClient) { }
 
