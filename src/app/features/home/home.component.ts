@@ -9,7 +9,8 @@ import { IUser } from 'src/app/core/models/user';
   styles: []
 })
 export class HomeComponent implements OnInit {
-
+  pageTitle:string="Welcome";
+  description: string="Una birra artigianale è una birra cruda, prodotta senza aggiungere conservanti e prediligendo materie prime di qualità. É prodotta da mastri birrai con entusiasmo e creatività e sempre in quantità abbastanza limitate.";
   user : IUser | null=null; 
 
   //per passare il parametro

@@ -1,18 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
+                <img src="https://it.seaicons.com/wp-content/uploads/2015/09/beer-icon.png" height="44" width="44" />
                 <li class="nav-item">
-                    <h2 style="color: #FFD700" aria-current="page">BEERVANADE
-                        <img src="https://e7.pngegg.com/pngimages/961/438/png-clipart-beer-mug-logo-beer-food-keg-oktoberfest-beer-barrel-mug-and-wheat-poster-barrel.png"
-                            width="70px" />
+                    <h2 style="color: #FFD700" aria-current="page">{{ecommerceName}}
                     </h2>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink='/home'> HOME</a>
+                    <a class="nav-link active" aria-current="page" style="color:white" routerLink='/home'>
+                        {{firstComponent}} </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink='/catalog'> BEERSHOP</a>
+                    <a class="nav-link active" aria-current="page" style="color:white" routerLink='/catalog'>
+                        {{secondComponent}} </a>
                 </li>
             </ul>
         </div>
@@ -21,6 +22,5 @@
             src="https://img.icons8.com/officel/30/000000/user.png" /></a>
     <a class="nav-link" routerLink='/cart'><img src="https://img.icons8.com/office/40/000000/shopping-cart.png" /></a>
 </nav>
-<div class='container'>
-    <router-outlet></router-outlet>
-</div>
+
+<router-outlet></router-outlet>

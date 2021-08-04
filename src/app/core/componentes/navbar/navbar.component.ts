@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class NavbarComponent implements OnInit {
+  ecommerceName: string="BEERVANADE"; 
+  firstComponent: string ="HOME"; 
+  secondComponent: string="SHOP"; 
 
   constructor() { }
 
