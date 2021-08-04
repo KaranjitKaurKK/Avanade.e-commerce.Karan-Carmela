@@ -4,7 +4,7 @@ export interface IProduct{
     'price': number; 
     'type': string;
     'color': string;
-    'provenience': string; 
+    'origin': string; 
     'degree': number; 
     'rate': number;
     'imageUrl': string;
