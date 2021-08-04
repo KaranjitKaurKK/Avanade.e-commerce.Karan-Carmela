@@ -13,23 +13,23 @@ export class UserService {
 
     constructor(private http: HttpClient) { }
 
-    getUsers(firstName: string): Observable<IUser> {
-        return this.http.get<IUser>(this.userBasePath +'./'+ firstName).pipe(
+    getUser(userName: String): Observable<IUser> {
+        return this.http.get<IUser>(this.userBasePath + userName).pipe(
             tap(data => console.log('All', JSON.stringify(data))),
             catchError(this.handleError)
         );
     }
-
+  
     private handleError(err: HttpErrorResponse) {
         let errorMessage = '';
-        if (err.error instanceof ErrorEvent) {
-            errorMessage = `An error occurred: ${err.error.message} `;
-        } else {
-            errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
-        }
 
-        alert()
-        console.error(errorMessage);
+        if (err.error) {
+            errorMessage = `An error occurred: ${err.error}, status: ${err.status} `;
+        } else {
+            errorMessage = `Non è stato possibile recuperare le info dell'utente: ${err.status}, error: ${err.message}`;
+        }  
+        //alert(errorMessage);
+        //this.toastr.error(errorMessage)
         return throwError(errorMessage);
     }
 }

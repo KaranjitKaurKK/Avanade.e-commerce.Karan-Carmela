@@ -11,13 +11,12 @@ import { SharedModule } from './shared/shared.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule, 
-    RouterModule,
-    CoreModule, 
-    SharedModule
+    CoreModule,
+    AppRoutingModule,
+    RouterModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

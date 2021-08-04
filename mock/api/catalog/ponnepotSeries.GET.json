@@ -1,0 +1,12 @@
+
+{
+    "id": 1,
+    "product": "Ponnepot Series",
+    "price": 4.95,
+    "type": "Belgian Strong Ale",
+    "color": "Dark Brown",
+    "provenience": "Belgium", 
+    "degree":10,
+    "rate":4.5,
+    "imageUrl": "src/assets/pannepot_1.webp"
+}
