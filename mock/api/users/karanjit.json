@@ -1,9 +1,12 @@
 {
+    "id": 1,
     "firstName": "Karanjit",
-    "lastName": "Kaur", 
+    "lastName": "Kaur",
+    "email": "karanjit.kaur@avanade.com",
+    "phoneNumber": "3317590325",
+    "dateOfBirth": "December 18th, 1995",
     "shippingAddress": {
-        "city":"Cremona",
-        "street": "Via Cesare Battisti, 43", 
-        "zipCode": "26030"
+        "city": "Cremona",
+        "street": "Via Battisti, 43"
     }
 }
