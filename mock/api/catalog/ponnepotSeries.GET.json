@@ -7,5 +7,6 @@
     "color": "Dark Brown",
     "provenience": "Belgium", 
     "degree":10,
+    "rate":4.5,
     "imageUrl": "src/assets/pannepot_1.webp"
 }

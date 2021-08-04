@@ -6,5 +6,6 @@ export interface IProduct{
     'color': string;
     'provenience': string; 
     'degree': number; 
+    'rate': number;
     'imageUrl': string;
 }
