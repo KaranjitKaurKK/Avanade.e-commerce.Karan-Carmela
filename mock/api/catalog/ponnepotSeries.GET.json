@@ -5,7 +5,7 @@
     "price": 4.95,
     "type": "Belgian Strong Ale",
     "color": "Dark Brown",
-    "provenience": "Belgium", 
+    "origin": "Belgium", 
     "degree":10,
     "rate":4.5,
     "imageUrl": "src/assets/pannepot_1.webp"
