@@ -1,0 +1,38 @@
+[
+    {
+        "productId": 1,
+        "productName": "Ponnepot Series",
+        "price": 4.95,
+        "type": "Belgian Strong Ale",
+        "color": "Dark Brown",
+        "origin": "Belgium",
+        "degree": 10,
+        "rate": 5,
+        "imageUrl": "src/assets/pannepot_1.webp",
+        "description": "Questa serie di birre prende il nome dai pescherecci sui quali gli uomini rischiavano quotidianamente la propria vita per sfamare le loro famiglie. Al palato evince subito il contrasto tra l'amarezza del tostato e la dolcezza del caramello. La serie si distingue per le diverse annate in cui la birra è stata fatta invecchiare nelle botti dove precedentemente erano stati distillati sia bourbon che calvados (acquavite di sidro)."
+    },
+    {
+        "productId": 2,
+        "productName": "Whiteer",
+        "price": 5.5,
+        "type": "Blanche/Witbier",
+        "color": "White",
+        "origin": "Belgium",
+        "degree": 5,
+        "rate": 1.5,
+        "imageUrl": "src/assets/pannepot_1.webp",
+        "description": "Deve il suo nome ai monaci fondatori dell'abbazia di Middelburg (Belgio), che indossavano sempre vesti talari bianche. Birra bianca di frumento, dagli aromi lievemente dolci che ricordano la vaniglia, e da note speziate di coriandolo. Morbida al palato, beverina e rinfrescante."
+    },
+    {
+        "productId": 3,
+        "productName": "Dragonfly",
+        "price": 5.5,
+        "type": "Zwickel/Keller/Landbier",
+        "color": "Blonde",
+        "origin": "Italia",
+        "degree": 5,
+        "rate": 2.5,
+        "imageUrl": "src/assets/pannepot_1.webp",
+        "description": "Dragonfly è una Keller Helles dal colore dorato realizzata con i luppoli Tettnanger, Hallertauer e Northern Brewer. Fresca e leggera gli aromi sono i tipici dello stile, caratterizzati infatti sia al naso che al palato da dolci e delicate note di malto ben bilanciate con le sfumature lievemente amare conferite dalla luppolatura."
+    }
+]

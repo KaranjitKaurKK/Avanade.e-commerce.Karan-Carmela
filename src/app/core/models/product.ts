@@ -8,4 +8,5 @@ export interface IProduct{
     'degree': number; 
     'rate': number;
     'imageUrl': string;
+    'description': string;
 }
