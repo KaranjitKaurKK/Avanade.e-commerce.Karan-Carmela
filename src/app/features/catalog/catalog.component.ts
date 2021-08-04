@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-catalog',
   templateUrl : './catalog.component.html',
   styles: [
+    
   ]
 })
 export class CatalogComponent implements OnInit {
