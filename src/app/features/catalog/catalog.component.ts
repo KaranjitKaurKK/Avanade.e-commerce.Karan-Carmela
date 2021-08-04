@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
     </p>
   `,
   styles: [
+    
   ]
 })
 export class CatalogComponent implements OnInit {
