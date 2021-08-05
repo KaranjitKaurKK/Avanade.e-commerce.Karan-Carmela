@@ -14,7 +14,7 @@ export class CatalogComponent implements OnInit {
   errorMessage: string = '';
   private _listFilter: string = '';
 
-  colors: string[] = ['All', 'Dark Brown', 'Blonde', 'White'];
+  colors: string[] = ['All', 'Brown', 'Red', 'Blonde', 'White'];
 
   colorForm: FormGroup = new FormBuilder().group({
     color: ['']
