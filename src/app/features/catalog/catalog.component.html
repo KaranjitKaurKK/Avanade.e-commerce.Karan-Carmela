@@ -2,16 +2,18 @@
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
       <h3 class="no_toc">Filter</h3>
-      <form class="row g-3" [formGroup]="colorForm" (change)="selectListFiltered()">
-        <div class="col-auto">
-          <input type="text" formControlName="productName" placeholder="Filter by name (min 3)">
-        </div>
-   <!--      <div class="col-md-2">
-          <label for="input" class="form-label">Select the color of beer you want:</label>
+      <form class="row g-3" [formGroup]="colorForm">
+        <div class="form-group col-auto">
+          <label class="form-label">Filter</label>
+          <input type="text" 
+                class="form-control" aria-describedby="filterHelp" placeholder="Filter by name (min 3)" formControlName="productName">
+        </div>        
+        <div class="col-md-2">
+          <label class="form-label">Select the color of beer you want:</label>
           <select class="form-select" (change)="selectColor()" name="col" formControlName="color">            
             <option *ngFor="let col of colors" [value]="col">{{col}}</option>          
           </select>
-        </div> -->
+        </div>
       </form>
     </div>
   </div>

@@ -8,6 +8,7 @@ export class BeerFilterPipe implements PipeTransform {
 
   transform(products: IProduct[], inputFilter: string): IProduct[] {
     console.log("beerpipe =", inputFilter);
+    
     if (!inputFilter||inputFilter.length <= 3) //true: se null, stringa vuota o 0, o undefined
     { 
       return products;
@@ -18,6 +19,4 @@ export class BeerFilterPipe implements PipeTransform {
       return product.productName.toLocaleLowerCase().includes(inputFilteredLowerCase);
     });
   }
-
-
 }

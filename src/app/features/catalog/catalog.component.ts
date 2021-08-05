@@ -16,19 +16,15 @@ export class CatalogComponent implements OnInit {
   colors: string[] = ['All', 'Brown', 'Red', 'Blonde', 'White'];
 
   colorForm: FormGroup = new FormBuilder().group({
-    color: [''],
-    listFilter:['']
+    productName: [''],
+    color: ['All']
   });
 
   filteredProducts: IProduct[] = [];
   products: IProduct[] = [];
 
   constructor(private productService: ProductService, private route: ActivatedRoute,
-    private router: Router, private formBuilder: FormBuilder) { 
-      this.colorForm=this.formBuilder.group({
-        productName: [null, [Validators.minLength(4)]]
-      })
-    }
+    private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe({
@@ -40,13 +36,7 @@ export class CatalogComponent implements OnInit {
     });
   }
 
-  performListFilter(textBox: string): IProduct[] {
-    textBox = textBox.toLocaleLowerCase();
-    return this.products.filter((product: IProduct) =>
-      product.productName.toLocaleLowerCase().includes(textBox));
-  }
-
-  performFilter(selectBy: string): void { 
+  performFilter(selectBy: string): void {
     this.filteredProducts = this.products.filter((item) => {
       if (selectBy != 'All') {
         return selectBy === item.color;
@@ -55,13 +45,6 @@ export class CatalogComponent implements OnInit {
         return this.products;
       }
     })
-  }
-
-  selectListFiltered()
-  {
-    let value = (this.colorForm.get('productName') || {}).value;
-    this.performListFilter(value);
-    console.log('value = ', value);
   }
 
   selectColor() {
