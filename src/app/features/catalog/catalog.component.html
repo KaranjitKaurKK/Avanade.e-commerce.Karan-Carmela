@@ -1,35 +1,32 @@
-
-
-  <div class="sidebar-wrapper it-line-right-side" style="margin: 1em">
-    <div class="sidebar-linklist-wrapper">
-      <div class="link-list-wrapper">
-        <ul class="link-list">
-            <h3 class="no_toc">Filter</h3>
-          <li>
-            <form class="row g-3">
-            <div class="col-auto">
-              <input type="text" class="form-control" placeholder="Filter by name">
-            </div>
-            <div class="col-auto">
-              <button type="submit" class="btn btn-primary mb-3">Search</button>
-            </div>
-          </form>
-          </li>
-          <li><div class="col-md-2">
-            <label for="input" class="form-label">Select the color of beer you want</label>
-            <select id="input" class="form-select">
+<div class="sidebar-wrapper it-line-right-side" style="margin: 1em">
+  <div class="sidebar-linklist-wrapper">
+    <div class="link-list-wrapper">
+      <h3 class="no_toc">Filter</h3>
+      <form class="row g-3">
+        <div class="col-auto">
+          <input type="text" class="form-control" placeholder="Filter by name">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">Search</button>
+        </div>
+      </form>
+      <label for="input" class="form-label">Select the color of beer you want</label>
+      <form [formGroup]="colorForm">
+        <select class="form-select" (change)="selectColor()" name="col" formControlName="color">            
+          <option *ngFor="let col of colors" [value]="col">{{col}}</option>          
+        </select>
+      </form>
+      <!-- <select id="input" class="form-select">
               <option selected>Choose...</option>
               <option value="1">All</option>
               <option value="2">White</option>
               <option value="3">Blonde</option>
               <option value="4">Dark brawn</option>
-            </select>
-          </div>
-        </li>
-        </ul>
-      </div>
+            </select> -->
     </div>
   </div>
+</div>
+
 
 
 
@@ -40,27 +37,25 @@
 
 
 <div class="row" style="margin: 2em; float:right;">
-  <div class="flex-center"><h1>Beer List:</h1></div>
-    <div class="card-group" *ngFor='let product of filteredProducts' style="margin: 3em; width: 400px; height: 100px; ">
-      <ul class="list-group list-group-flush"><span class="border border-light">
-        <li class="list-group-item" > <img src={{product.imageUrl}}  class="rounded mx-auto d-block"  width="100px" height="100px">
-        <br>
-        <h5>{{product.productName}}
-        <button type="button" class="btn btn-primary btn-sm" style="float: right;" routerLink='/cart'>ACQUISTA
-        <i class="fa fa-cart-arrow-down"></i></button></h5></li>
+  <div class="flex-center">
+    <h1>Beer List:</h1>
+  </div>
+  <div class="card-group" *ngFor='let product of filteredProducts' style="margin: 3em; width: 400px; height: 100px; ">
+    <ul class="list-group list-group-flush"><span class="border border-light">
+        <li class="list-group-item"> <img src={{product.imageUrl}} class="rounded mx-auto d-block" width="100px"
+            height="100px">
+          <br>
+          <h5>{{product.productName}}
+            <button type="button" class="btn btn-primary btn-sm" style="float: right;" routerLink='/cart'>ACQUISTA
+              <i class="fa fa-cart-arrow-down"></i></button>
+          </h5>
+        </li>
         <li class="list-group-item" style="font-size:x-small">Description: {{product.description}}</li>
         <li class="list-group-item" style="font-size:small">Origin: {{product.origin}} </li>
         <li class="list-group-item" style="font-size:small">Type: {{product.type}}</li>
         <li class="list-group-item" style="font-size:small">Color: {{product.color}}</li>
         <li class="list-group-item" style="font-size:small">Price: {{product.price}}</li>
         <li class="list-group-item" style="font-size:small">Rate: {{product.rate}}</li>
-    </span></ul>
-    </div>
+      </span></ul>
+  </div>
 </div>
-
-
-
-
-
-
-
