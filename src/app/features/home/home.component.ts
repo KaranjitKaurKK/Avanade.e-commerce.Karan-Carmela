@@ -6,8 +6,9 @@ import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styles: [],
+  templateUrl:  './home.component.html' ,
+  styleUrls: ['./home.component.css'],
+
   //providers: [UserService]
 
 })
@@ -27,7 +28,7 @@ export class HomeComponent implements OnInit {
       console.log(params)
 
       if (params && !params.user) {
-        this.toastrService.error('user not found', 'Major Error', { timeOut: 3000, });
+        this.toastrService.error('user not found!', 'FAILED', { timeOut: 3000, });
       }
       else {
         this.params = params.user;
@@ -35,7 +36,7 @@ export class HomeComponent implements OnInit {
           this.user = data;
           console.log("user->", this.user);
         }, error => {
-          this.toastrService.error('user not found', 'Major Error', { timeOut: 3000, });
+          this.toastrService.error('user not found!', 'FAILED', { timeOut: 3000, });
         })
       }
     })

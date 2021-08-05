@@ -8,7 +8,7 @@
         "origin": "Belgium",
         "degree": 10,
         "rate": 5,
-        "imageUrl": "src/assets/pannepot_1.webp",
+        "imageUrl": "https://www.cantinadellabirra.it/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/p/a/pannepot_1.png",
         "description": "Questa serie di birre prende il nome dai pescherecci sui quali gli uomini rischiavano quotidianamente la propria vita per sfamare le loro famiglie. Al palato evince subito il contrasto tra l'amarezza del tostato e la dolcezza del caramello. La serie si distingue per le diverse annate in cui la birra è stata fatta invecchiare nelle botti dove precedentemente erano stati distillati sia bourbon che calvados (acquavite di sidro)."
     },
     {
@@ -20,7 +20,7 @@
         "origin": "Belgium",
         "degree": 5,
         "rate": 1.5,
-        "imageUrl": "src/assets/pannepot_1.webp",
+        "imageUrl": "https://www.cantinadellabirra.it/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/-/w/-witheer_rgb_1.png",
         "description": "Deve il suo nome ai monaci fondatori dell'abbazia di Middelburg (Belgio), che indossavano sempre vesti talari bianche. Birra bianca di frumento, dagli aromi lievemente dolci che ricordano la vaniglia, e da note speziate di coriandolo. Morbida al palato, beverina e rinfrescante."
     },
     {
@@ -32,7 +32,7 @@
         "origin": "Italia",
         "degree": 5,
         "rate": 2.5,
-        "imageUrl": "src/assets/pannepot_1.webp",
+        "imageUrl": "https://www.cantinadellabirra.it/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/m/l/mlc.dragonfly.png",
         "description": "Dragonfly è una Keller Helles dal colore dorato realizzata con i luppoli Tettnanger, Hallertauer e Northern Brewer. Fresca e leggera gli aromi sono i tipici dello stile, caratterizzati infatti sia al naso che al palato da dolci e delicate note di malto ben bilanciate con le sfumature lievemente amare conferite dalla luppolatura."
     }
 ]

@@ -1,25 +1,24 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
-                <img src="https://it.seaicons.com/wp-content/uploads/2015/09/beer-icon.png" height="44" width="44" />
+                <img src="https://it.seaicons.com/wp-content/uploads/2015/09/beer-icon.png" height="34" width="34" />
                 <li class="nav-item">
-                    <h2 style="color: #FFD700" aria-current="page">{{ecommerceName}}
-                    </h2>
+                    <h3 style="color: #FFD700" aria-current="page">{{ecommerceName}}
+                    </h3>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" style="color:white" routerLink='/home'>
-                        {{firstComponent}} </a>
+                    <a class="nav-link active" aria-current="page" routerLink='/home'>
+                       {{firstComponent}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" style="color:white" routerLink='/catalog'>
+                    <a class="nav-link active" aria-current="page"  routerLink='/catalog'>
                         {{secondComponent}} </a>
                 </li>
             </ul>
         </div>
     </div>
-    <a class="nav-link active" aria-current="page" routerLink='/profile'><img
-            src="https://img.icons8.com/officel/30/000000/user.png" /></a>
-    <a class="nav-link" routerLink='/cart'><img src="https://img.icons8.com/office/40/000000/shopping-cart.png" /></a>
+    <a class="nav-link active" aria-current="page" routerLink='/profile'><i class="fa fa-user-circle fa-2x" style="color:white"></i></a>
+    <a class="nav-link" routerLink='/cart'><i class="fa fa-shopping-cart fa-2x" style="color:white"></i></a>
 </nav>
-<router-outlet></router-outlet>
+
