@@ -4,18 +4,19 @@ import { CommonModule } from '@angular/common';
 import { CatalogRoutingModule } from './catalog-routing.module';
 import { CatalogComponent } from './catalog.component';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BeerFilterPipe } from './pipe/beer-filter.pipe';
 
 
 @NgModule({
   declarations: [
-    CatalogComponent
+    CatalogComponent,
+    BeerFilterPipe
   ],
   imports: [
     CommonModule,
-    CatalogRoutingModule, 
+    CatalogRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
   ]
 })
 export class CatalogModule { }

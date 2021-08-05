@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from './core/core.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BeerFilterPipe } from './features/catalog/pipe/beer-filter.pipe';
 
 @NgModule({
   declarations: [

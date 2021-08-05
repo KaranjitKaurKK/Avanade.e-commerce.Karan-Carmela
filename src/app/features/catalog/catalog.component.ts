@@ -12,19 +12,23 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 })
 export class CatalogComponent implements OnInit {
   errorMessage: string = '';
-  private _listFilter: string = '';
 
   colors: string[] = ['All', 'Brown', 'Red', 'Blonde', 'White'];
 
   colorForm: FormGroup = new FormBuilder().group({
-    color: ['']
+    color: [''],
+    listFilter:['']
   });
 
   filteredProducts: IProduct[] = [];
   products: IProduct[] = [];
 
   constructor(private productService: ProductService, private route: ActivatedRoute,
-    private router: Router) {  }
+    private router: Router, private formBuilder: FormBuilder) { 
+      this.colorForm=this.formBuilder.group({
+        productName: [null, [Validators.minLength(4)]]
+      })
+    }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe({
@@ -36,23 +40,34 @@ export class CatalogComponent implements OnInit {
     });
   }
 
-  performFilter(selectBy: string, textBox: string): void {
-    this.filteredProducts=this.products.filter((item) => {
-      if (selectBy!='All')
-      {
-      return selectBy===item.color;
+  performListFilter(textBox: string): IProduct[] {
+    textBox = textBox.toLocaleLowerCase();
+    return this.products.filter((product: IProduct) =>
+      product.productName.toLocaleLowerCase().includes(textBox));
+  }
+
+  performFilter(selectBy: string): void { 
+    this.filteredProducts = this.products.filter((item) => {
+      if (selectBy != 'All') {
+        return selectBy === item.color;
       }
-      else 
-      {
+      else {
         return this.products;
       }
     })
-  } 
+  }
+
+  selectListFiltered()
+  {
+    let value = (this.colorForm.get('productName') || {}).value;
+    this.performListFilter(value);
+    console.log('value = ', value);
+  }
 
   selectColor() {
-    let value=(this.colorForm.get('color')||{}).value;
-    this.performFilter(value, '');
-    console.log('value=', value);
+    let value = (this.colorForm.get('color') || {}).value;
+    this.performFilter(value);
+    console.log('value =', value);
   }
 }
 

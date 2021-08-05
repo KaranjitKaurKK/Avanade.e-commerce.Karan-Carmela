@@ -2,45 +2,26 @@
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
       <h3 class="no_toc">Filter</h3>
-      <form class="row g-3">
+      <form class="row g-3" [formGroup]="colorForm" (change)="selectListFiltered()">
         <div class="col-auto">
-          <input type="text" class="form-control" placeholder="Filter by name">
+          <input type="text" formControlName="productName" placeholder="Filter by name (min 3)">
         </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-3">Search</button>
-        </div>
+   <!--      <div class="col-md-2">
+          <label for="input" class="form-label">Select the color of beer you want:</label>
+          <select class="form-select" (change)="selectColor()" name="col" formControlName="color">            
+            <option *ngFor="let col of colors" [value]="col">{{col}}</option>          
+          </select>
+        </div> -->
       </form>
-      <label for="input" class="form-label">Select the color of beer you want</label>
-      <form [formGroup]="colorForm">
-        <select class="form-select" (change)="selectColor()" name="col" formControlName="color">            
-          <option *ngFor="let col of colors" [value]="col">{{col}}</option>          
-        </select>
-      </form>
-      <!-- <select id="input" class="form-select">
-              <option selected>Choose...</option>
-              <option value="1">All</option>
-              <option value="2">White</option>
-              <option value="3">Blonde</option>
-              <option value="4">Dark brawn</option>
-            </select> -->
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
 <div class="row" style="margin: 2em; float:right;">
   <div class="flex-center">
     <h1>Beer List:</h1>
   </div>
-  <div class="card-group" *ngFor='let product of filteredProducts' style="margin: 3em; width: 400px; height: 100px; ">
+  <div class="card-group" *ngFor="let product of filteredProducts | beerFilter: colorForm?.get('productName')?.value"
+    style="margin: 1em; width: 480px; height: 100px; margin-block-end: 25em; ">
     <ul class="list-group list-group-flush"><span class="border border-light">
         <li class="list-group-item"> <img src={{product.imageUrl}} class="rounded mx-auto d-block" width="100px"
             height="100px">
