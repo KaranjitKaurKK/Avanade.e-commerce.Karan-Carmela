@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 4em;">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
@@ -18,10 +18,9 @@
             </ul>
         </div>
     </div>
-    <a class="nav-link">
+    <a class="nav-link" routerLink='/cart'>
         <i class="fa fa-shopping-cart fa-2x" style="color:white">
-            <span class="position-absolute top-0 start-40 translate-middle badge rounded-pill bg-danger"
-                style="height: 90px; width: 100%;">{{count}}
+            <span class="position-absolute top-0 start-40 translate-middle badge rounded-pill bg-warning" style="font-size: 0.43em; margin: 0.83em;" >{{count}}
                 <span class="visually-hidden">Beer added to the cart</span>
             </span>
         </i>

@@ -1,13 +1,13 @@
 <div class="sidebar-wrapper it-line-right-side" style="margin: 1em">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
-      <h3 class="no_toc">Filter</h3>
+      <h3 class="no_toc">Search</h3>
       <form class="row g-3" [formGroup]="colorForm">
         <div class="form-group col-auto">
           <label class="form-label">Filter</label>
-          <input type="text" 
+          <input type="text"
                 class="form-control" aria-describedby="filterHelp" placeholder="Filter by name (min 3)" formControlName="productName">
-        </div>        
+        </div>
         <div class="col-md-2">
           <label class="form-label">Select the color of beer you want:</label>
           <select class="form-select" (change)="selectColor()" name="col" formControlName="color">            
@@ -37,7 +37,7 @@
         <li class="list-group-item" style="font-size:small">Origin: {{product.origin}} </li>
         <li class="list-group-item" style="font-size:small">Type: {{product.type}}</li>
         <li class="list-group-item" style="font-size:small">Color: {{product.color}}</li>
-        <li class="list-group-item" style="font-size:small">Price: {{product.price | currency }}</li>
+        <li class="list-group-item" style="font-size:small">Price: {{product.price | currency:'EUR':true}}</li>
         <li class="list-group-item" style="font-size:small">Rate: {{product.rate}}</li>
       </span></ul>
   </div>
