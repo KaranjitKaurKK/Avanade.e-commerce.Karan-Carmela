@@ -29,7 +29,7 @@
             height="100px">
           <br>
           <h5>{{product.productName}}
-            <button type="button" class="btn btn-primary btn-sm" style="float: right;" routerLink='/cart'>ACQUISTA
+            <button type="button" class="btn btn-primary btn-sm" style="float: right;" (click)="addToCart(product)">ACQUISTA
               <i class="fa fa-cart-arrow-down"></i></button>
           </h5>
         </li>
@@ -37,7 +37,7 @@
         <li class="list-group-item" style="font-size:small">Origin: {{product.origin}} </li>
         <li class="list-group-item" style="font-size:small">Type: {{product.type}}</li>
         <li class="list-group-item" style="font-size:small">Color: {{product.color}}</li>
-        <li class="list-group-item" style="font-size:small">Price: {{product.price}}</li>
+        <li class="list-group-item" style="font-size:small">Price: {{product.price | currency }}</li>
         <li class="list-group-item" style="font-size:small">Rate: {{product.rate}}</li>
       </span></ul>
   </div>

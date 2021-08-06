@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +12,20 @@ export class NavbarComponent implements OnInit {
   firstComponent: string ="HOME"; 
   secondComponent: string="SHOP"; 
 
-  constructor() { }
+  count: number=0;
+
+  clickEventSubscription:Subscription| undefined;
+  constructor(private cartService: CartService) 
+  { 
+    this.clickEventSubscription = this.cartService.getClickEvent().subscribe(()=>{
+      this.countFunction();
+    });
+  }
+
+  countFunction(){
+    this.count+=1; 
+  }
+  
 
   ngOnInit(): void {
   }
