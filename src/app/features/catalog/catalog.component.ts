@@ -54,15 +54,9 @@ export class CatalogComponent implements OnInit {
     this.performFilter(value);
     console.log('value =', value);
   }
-
   
   addToCart(product: IProduct) {
-
     this._cartService.addClickEvent();
-    /* console.log(this.products);
-       this._cartService.addToCart(product);
-       window.alert('Your product has been added to the cart!'); */
-
   }
 }
 
